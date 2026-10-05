@@ -3,30 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Our Portfolio Site</title>
+  <title>Rebus — Group Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
-    <p class="site-title"><a href="index.html">Our Portfolio Site</a></p>
+    <p class="site-title"><a href="index.html">Rebus</a></p>
     <nav aria-label="Main">
       <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="#main" aria-current="page">Home</a></li>
+        <li><a href="#hosts">Hosts</a></li>
+        <li><a href="#builds">Builds</a></li>
+        <li><a href="#reading">Reading &amp; sources</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <h1>Welcome</h1>
-    <p>This is your group's starter site. Nothing here is final.</p>
-    <p>Fill in your planning Doc, then leave a comment that starts with
-      <code>@agent build</code> to have the agent replace this page with your own.</p>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">HNR 241 · Group portfolio</p>
+      <h1 id="page-title">Rebus</h1>
+      <p class="hero-intro">A shared archive of our reading, ideas, and individual journals.</p>
+      <p class="hero-note">Inspired by the worlds of Elias and <em>Westworld</em>, this portfolio brings our group’s work together, one build at a time.</p>
+      <a class="button-link" href="#builds">Explore the builds <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="content-section" id="hosts" aria-labelledby="hosts-title">
+      <p class="eyebrow">The people behind the work</p>
+      <h2 id="hosts-title">Our hosts</h2>
+      <p>We’re putting together our host profiles and individual journals. Thea is graduating in 2030; more introductions will be added as the group shares them.</p>
+      <p class="quiet-note">Character quotes and the remaining host details have not been provided yet.</p>
+    </section>
+
+    <section class="content-section" id="builds" aria-labelledby="builds-title">
+      <p class="eyebrow">A work in progress</p>
+      <h2 id="builds-title">Builds</h2>
+      <p>Each build will bring together writing from across the group. Choose a build to see its place in the series; entries will appear here as they’re ready.</p>
+      <ol class="build-grid" aria-label="Eight planned builds">
+        <li><span class="build-number">01</span><span>Build 1 <span class="status">Coming soon</span></span></li>
+        <li><span class="build-number">02</span><span>Build 2 <span class="status">Coming soon</span></span></li>
+        <li><span class="build-number">03</span><span>Build 3 <span class="status">Coming soon</span></span></li>
+        <li><span class="build-number">04</span><span>Build 4 <span class="status">Coming soon</span></span></li>
+        <li><span class="build-number">05</span><span>Build 5 <span class="status">Coming soon</span></span></li>
+        <li><span class="build-number">06</span><span>Build 6 <span class="status">Coming soon</span></span></li>
+        <li><span class="build-number">07</span><span>Build 7 <span class="status">Coming soon</span></span></li>
+        <li><span class="build-number">08</span><span>Build 8 <span class="status">Coming soon</span></span></li>
+      </ol>
+    </section>
+
+    <section class="content-section" id="reading" aria-labelledby="reading-title">
+      <p class="eyebrow">Notes from the reading desk</p>
+      <h2 id="reading-title">Reading &amp; sources</h2>
+      <div class="reading-grid">
+        <article class="reading-card">
+          <h3>Our reading</h3>
+          <p>A group summary of our reading will be added here.</p>
+        </article>
+        <article class="reading-card">
+          <h3>About Elias</h3>
+          <p>Our philosopher’s reference and citation will be added here.</p>
+        </article>
+        <article class="reading-card">
+          <h3>Bibliography</h3>
+          <p>Sources will be listed here as the project develops.</p>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>Built by our group with help from an AI agent.</p>
+    <p>Rebus · HNR 241 group portfolio</p>
   </footer>
 </body>
 </html>
