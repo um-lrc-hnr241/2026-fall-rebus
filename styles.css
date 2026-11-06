@@ -579,6 +579,15 @@ video {
   margin-bottom: 0;
 }
 
+.document-preview {
+  display: block;
+  width: 100%;
+  min-height: 30rem;
+  height: 70vh;
+  border: 0;
+  background: var(--paper-light);
+}
+
 .people-layout {
   display: grid;
   grid-template-columns: minmax(13rem, 16rem) minmax(0, 1fr);
