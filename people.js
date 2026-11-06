@@ -11,7 +11,12 @@ const hosts = [
     name: "Theadora",
     major: "Chemistry",
     journal: "",
-    builds: { 1: "", 3: "", 4: "", 5: "", 7: "", 8: "" }
+    builds: {
+      1: "https://docs.google.com/document/d/16zzg6w6SrxktNYL5F8A1_N66brGjf9l6JVoO6NwvRpo/edit?usp=sharing",
+      3: "https://docs.google.com/document/d/1BrXzzSilIu_xqdHavnrsRYexZjdxD0jObvgDby0Lc5Y/edit?usp=sharing",
+      4: "https://docs.google.com/document/d/1dPM8wvqAMi3OWE_xnhf4MsRXi1qioZwwwiEub2jxEXg/edit?usp=sharing",
+      5: "", 7: "", 8: ""
+    }
   },
   {
     id: "catherine",
@@ -113,6 +118,7 @@ hosts.forEach((host, hostIndex) => {
     const panelId = `${host.id}-${writing.key}`;
     const tabId = `${panelId}-tab`;
     const tab = make("button", "writing-tab", writing.label);
+    if (writing.file) tab.dataset.sourceUrl = writing.file;
     tab.type = "button";
     tab.id = tabId;
     tab.setAttribute("role", "tab");
@@ -127,7 +133,17 @@ hosts.forEach((host, hostIndex) => {
     panel.tabIndex = 0;
     if (writingIndex !== 0) panel.hidden = true;
     const panelTitle = make("h3", "", writing.label);
-    panel.append(panelTitle, make("p", "placeholder", writingInfo(host, writing.label, writing.file)));
+    panel.append(panelTitle);
+    if (writing.file) {
+      const preview = make("iframe", "document-preview");
+      preview.src = writing.file.replace(/\/edit(?:\?.*)?$/, "/preview");
+      preview.title = `${host.name}, ${writing.label} document preview`;
+      preview.loading = "lazy";
+      preview.setAttribute("referrerpolicy", "no-referrer");
+      panel.append(preview);
+    } else {
+      panel.append(make("p", "placeholder", writingInfo(host, writing.label, writing.file)));
+    }
     display.append(panel);
 
     tab.addEventListener("click", () => selectWriting(tab, tabNav, display));
@@ -180,6 +196,16 @@ layout.append(sidebar, content);
 app.append(layout);
 
 function selectWriting(selected, tabNav, display) {
+  const sourceNote = display.parentElement.querySelector(".source-fallback");
+  if (selected.dataset.sourceUrl) {
+    const sourceLink = make("a", "", "Not displaying right? Open the source file in a new tab ↗");
+    sourceLink.href = selected.dataset.sourceUrl;
+    sourceLink.target = "_blank";
+    sourceLink.rel = "noopener noreferrer";
+    sourceNote.replaceChildren(sourceLink);
+  } else {
+    sourceNote.textContent = "Not displaying right? Source file unavailable: no Google Docs URL was supplied in the planning document.";
+  }
   tabNav.querySelectorAll('[role="tab"]').forEach((tab) => {
     const active = tab === selected;
     tab.setAttribute("aria-selected", String(active));
