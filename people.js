@@ -11,34 +11,34 @@ const hosts = [
     name: "Theadora",
     major: "Chemistry",
     journal: "",
-    builds: { 1: "Copy of Build 1", 3: "Copy of Build 3", 4: "Copy of build 4", 5: "", 7: "", 8: "" }
+    builds: { 1: "", 3: "", 4: "", 5: "", 7: "", 8: "" }
   },
   {
     id: "catherine",
     name: "Catherine",
     major: "Major not provided",
-    journal: "Westworld Personal Journal - Cate",
+    journal: "",
     builds: { 1: "", 3: "", 4: "", 5: "", 7: "", 8: "" }
   },
   {
     id: "danielle",
     name: "Danielle",
     major: "Major not provided",
-    journal: "Westworld Personal Journal",
+    journal: "",
     builds: { 1: "", 3: "", 4: "", 5: "", 7: "", 8: "" }
   },
   {
     id: "maya",
     name: "Maya",
     major: "Major not provided",
-    journal: "Westworld Personal Journal - Maya",
+    journal: "",
     builds: { 1: "", 3: "", 4: "", 5: "", 7: "", 8: "" }
   },
   {
     id: "lilly",
     name: "Lilly",
     major: "Major not provided",
-    journal: "Personal Journal Honors",
+    journal: "",
     builds: { 1: "", 3: "", 4: "", 5: "", 7: "", 8: "" }
   }
 ];
@@ -80,8 +80,7 @@ const sideList = make("ul", "host-side-list");
 const content = make("div", "host-content");
 
 function writingInfo(host, key, filename) {
-  if (!filename) return `File unavailable: no file name, Google Docs link, or document contents were supplied for ${host.name}'s ${key}.`;
-  return `Referenced Google Doc: “${filename}”. File unavailable: the document URL or contents were not included in the planning document.`;
+  return `Writing unavailable: no Google Docs URL or document text was supplied for ${host.name}'s ${key}.`;
 }
 
 hosts.forEach((host, hostIndex) => {
@@ -103,7 +102,7 @@ hosts.forEach((host, hostIndex) => {
   tabNav.setAttribute("aria-label", `${host.name}'s writing`);
   tabNav.setAttribute("role", "tablist");
   tabNav.setAttribute("aria-orientation", "horizontal");
-  const sourceNote = make("p", "source-fallback", "Not displaying right? Source file link unavailable: no Google Docs URL was supplied.");
+  const sourceNote = make("p", "source-fallback", "Not displaying right? Source file unavailable: no Google Docs URL was supplied in the planning document.");
   const display = make("div", "writing-display");
   display.setAttribute("aria-live", "polite");
 
