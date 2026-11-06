@@ -151,10 +151,10 @@ hosts.forEach((host, hostIndex) => {
   content.append(section);
 
   const item = make("li", "host-side-item");
-  const details = document.createElement("details");
-  details.open = hostIndex === 0;
+  const hostNavDetails = document.createElement("details");
+  hostNavDetails.open = hostIndex === 0;
   const summary = make("summary", "", host.name);
-  details.append(summary);
+  hostNavDetails.append(summary);
   const subList = make("ul", "host-subnav");
   writings.forEach((writing, index) => {
     const linkItem = make("li");
@@ -170,8 +170,8 @@ hosts.forEach((host, hostIndex) => {
     linkItem.append(link);
     subList.append(linkItem);
   });
-  details.append(subList);
-  item.append(details);
+  hostNavDetails.append(subList);
+  item.append(hostNavDetails);
   sideList.append(item);
 });
 
