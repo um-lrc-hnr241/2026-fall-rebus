@@ -3,58 +3,89 @@ const hosts = [
     id: "faizan",
     name: "Faizan",
     major: "Biopsychology, Cognitive, Neuroscience",
-    journal: "",
-    builds: { 1: "", 3: "", 4: "", 5: "", 7: "", 8: "" }
+    journal: "https://docs.google.com/document/d/1oYjbVAAFVXImqBa2bT6o7uLRIbDoye0SaHYbj00kp8Q/edit?tab=t.0",
+    builds: {
+      1: "https://docs.google.com/document/d/1KMPjgsYvlXfVRvA-4NdSzt8ePjQ5O3AmnYBRDT0Aujc/edit?tab=t.0",
+      3: "https://docs.google.com/document/d/1UyQ0GAiFHYjhmSYvwML6Ns7B9rhk8WIbKt15JggvLWg/edit?tab=t.0",
+      4: "https://docs.google.com/document/d/1D7v36A1imEf9Ai6xAk8AyzsH7LxTJ_RXNYbXZUGcJ6Q/edit?tab=t.0",
+      5: "https://docs.google.com/document/d/1ngfUIuj0_3xTJlaN9BeUuewwcrp4eDsW7whYupvkqVQ/edit?tab=t.z32hnyhbhiux",
+      7: "", 8: ""
+    }
   },
   {
     id: "theadora",
     name: "Theadora",
     major: "Chemistry",
-    journal: "",
+    journal: "https://docs.google.com/document/d/1iKgw9mtrwHA9p2k4oGt4eKFx571m5s0biTG6TsViSkw/edit?usp=sharing",
     builds: {
       1: "https://docs.google.com/document/d/16zzg6w6SrxktNYL5F8A1_N66brGjf9l6JVoO6NwvRpo/edit?usp=sharing",
       3: "https://docs.google.com/document/d/1BrXzzSilIu_xqdHavnrsRYexZjdxD0jObvgDby0Lc5Y/edit?usp=sharing",
       4: "https://docs.google.com/document/d/1dPM8wvqAMi3OWE_xnhf4MsRXi1qioZwwwiEub2jxEXg/edit?usp=sharing",
-      5: "", 7: "", 8: ""
+      5: "https://docs.google.com/document/d/1tWon0lkCHi3dVEFFladzLJ9e9LutvH9kKa2gtLjrY3c/edit?usp=sharing",
+      7: "", 8: ""
     }
   },
   {
     id: "catherine",
     name: "Catherine",
-    major: "Major not provided",
-    journal: "",
-    builds: { 1: "", 3: "", 4: "", 5: "", 7: "", 8: "" }
+    major: "Political Science",
+    journal: "https://docs.google.com/document/d/1ffEJQ7aI4YWvv5UB8mRQDu5MQ1T_vuR2S1Yboy3tu8U/edit?tab=t.0#heading=h.84y5y3d8yuc1",
+    builds: {
+      1: "https://docs.google.com/document/d/17pSW2YP6u8ZPJAwAhDIXV6_WA6e6pqRjIGxCI5vkN8o/edit?tab=t.0",
+      3: "https://docs.google.com/document/d/10U-7LWjd1ln4YGXNGvC3z61W3Sy8MgpM4_HC36h4cbI/edit?tab=t.0",
+      4: "https://docs.google.com/document/d/1MYjzNuQooHac7HT3arEgguhk6cJpslrgdLaqhtSmapY/edit?tab=t.0",
+      5: "https://docs.google.com/document/d/1AdnxgzNE5WlvDndQpyjeh_A2Xv8bR5Dhx1Vw8MuaUII/edit?tab=t.0",
+      7: "", 8: ""
+    }
   },
   {
     id: "danielle",
     name: "Danielle",
-    major: "Major not provided",
-    journal: "",
-    builds: { 1: "", 3: "", 4: "", 5: "", 7: "", 8: "" }
+    major: "Biology, Health & Society",
+    journal: "https://docs.google.com/document/d/1BkOPBftrwHjVAYYk64LMDXCBYHwq2EvRjBgWfVdxVBo/edit?usp=sharing",
+    builds: {
+      1: "https://docs.google.com/document/d/1YoeDBbiMq-hoJxDw9nXhbv5SVyR8XSYvFDktlK5eAPA/edit?usp=sharing",
+      3: "https://docs.google.com/document/d/1IBLhhsbrpmWZyf2AbwcaQcLfyNi_x6Be0ziMO2cCDYs/edit?usp=sharing",
+      4: "https://docs.google.com/document/d/1bC5ahBXRDwizaZND32xNU7S4AYnAeGEl3CHQp2Ls4Gs/edit?usp=sharing",
+      5: "https://docs.google.com/document/d/1xQu1JRMr9cb4MMnrSFX-1ONo76Dt_1aYBn0mghbgr34/edit?usp=sharing",
+      7: "", 8: ""
+    }
   },
   {
     id: "maya",
     name: "Maya",
-    major: "Major not provided",
+    major: "Economics",
     journal: "",
-    builds: { 1: "", 3: "", 4: "", 5: "", 7: "", 8: "" }
+    builds: {
+      1: "https://docs.google.com/document/d/12qAYoY09KorCfnxCe3YpnrdDCJ_GUwfhkvxi9ONWwNc/edit?tab=t.0",
+      3: "https://docs.google.com/document/d/1SKxrzOAY4lKHbc3bUef1Ij1o9AXpr0A7Rt12_uudrpo/edit?tab=t.0",
+      4: "https://docs.google.com/document/d/1YVGJmkRtqnCxoUkPdjCO3S8YhUoUmHEyyHKLUhFEgI4/edit?tab=t.0",
+      5: "https://docs.google.com/document/d/1J7KRlijpNXGWo4sgJlFLgTOGF5zv9ggqhLYJkv6WmLY/edit?tab=t.0",
+      7: "", 8: ""
+    }
   },
   {
     id: "lilly",
     name: "Lilly",
-    major: "Major not provided",
-    journal: "",
-    builds: { 1: "", 3: "", 4: "", 5: "", 7: "", 8: "" }
+    major: "Neuroscience",
+    journal: "https://docs.google.com/document/d/11I1XPa47NblwA5X5CjHIWXy7VnYgZSj51Rj6EtwQ9tc/edit?usp=sharing",
+    builds: {
+      1: "https://docs.google.com/document/d/1eP-vh8tkfq4FgUWjwYiPIhz-anbavx7fv8Euovu2JwE/edit?usp=sharing",
+      3: "https://docs.google.com/document/d/1ERdRUF7_imu8JhjPZaSSGIqHI9mcOkPuMmhQA8S3jxo/edit?usp=sharing",
+      4: "https://docs.google.com/document/d/1y3OVC7ZUcVoaWyowFX1LzWDE5Q4O6sYJtg7K96PGL74/edit?usp=sharing",
+      5: "https://docs.google.com/document/d/1glEahD9Wod-vS_drFq3k4mchTWurOyZHQNnQwGqAFuM/edit?usp=sharing",
+      7: "", 8: ""
+    }
   }
 ];
 
 const hostDetails = {
-  faizan: { year: "not provided", quote: "Favorite quote not provided." },
-  theadora: { year: "2030", quote: "“skibidi sigma test”" },
-  catherine: { year: "not provided", quote: "Favorite quote not provided." },
-  danielle: { year: "not provided", quote: "Favorite quote not provided." },
-  maya: { year: "not provided", quote: "Favorite quote not provided." },
-  lilly: { year: "not provided", quote: "Favorite quote not provided." }
+  faizan: { year: "2030", role: "Team spokesperson", quote: "“Evolution forged the entirety of sentient life on this planet using only one tool, the mistake.” — Dr. Robert Ford" },
+  theadora: { year: "2030", role: "Team moderator", quote: "“See, now that's why I never learned to read” — Lawrence" },
+  catherine: { year: "2030", role: "Team designer", quote: "Favorite quote not provided." },
+  danielle: { year: "2030", role: "Team checker", quote: "Favorite quote not provided." },
+  maya: { year: "2030", role: "Team recorder", quote: "Favorite quote not provided." },
+  lilly: { year: "2030", role: "Team devil’s advocate", quote: "“67”" }
 };
 
 const app = document.querySelector("#people-app");
@@ -98,9 +129,10 @@ hosts.forEach((host, hostIndex) => {
   hostTitle.id = `${host.id}-title`;
   const details = hostDetails[host.id];
   const majorLine = make("p", "member-meta", `Majoring in ${host.major}, class of ${details.year}`);
+  const roleLine = make("p", "member-meta", details.role);
   const quoteLine = make("p", "member-quote");
   quoteLine.append(make("em", "", details.quote));
-  heading.append(hostTitle, majorLine, quoteLine);
+  heading.append(hostTitle, majorLine, roleLine, quoteLine);
   section.append(heading);
 
   const tabNav = make("nav", "writing-tabs");
@@ -160,7 +192,7 @@ hosts.forEach((host, hostIndex) => {
   });
 
   section.append(tabNav, sourceNote, display);
-  const back = make("a", "back-link", "Back to host navigation ↑");
+  const back = make("a", "back-link", "Back to Top ↑");
   back.href = "#page-title";
   section.append(back);
   content.append(section);
