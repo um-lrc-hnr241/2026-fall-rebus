@@ -83,6 +83,45 @@ nav ul {
   text-decoration: none;
 }
 
+.site-header nav ul {
+  align-items: center;
+}
+
+.audio-toggle {
+  min-height: 2.75rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--wine);
+  border-radius: 0.15rem;
+  color: var(--wine);
+  background: var(--paper-light);
+  font: 500 0.76rem var(--mono);
+  cursor: pointer;
+}
+
+.audio-toggle:hover:not(:disabled) {
+  color: #fff;
+  background: var(--wine);
+}
+
+.audio-toggle:focus-visible {
+  outline: 3px solid var(--wine);
+  outline-offset: 3px;
+}
+
+.audio-toggle:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.audio-player-container {
+  position: fixed;
+  top: 0;
+  left: -10000px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
 .site-header nav a[aria-current="page"] {
   color: var(--wine);
   text-decoration: underline;
