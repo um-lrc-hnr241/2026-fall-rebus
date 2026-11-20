@@ -3,16 +3,32 @@
   if (!button) return;
 
   const videoId = "BcmhqfnkfEI";
+  const storageKey = "rebus-audio-enabled";
+  const isHomePage = document.body.classList.contains("home-page");
   let player;
-  let wantsAudio = false;
+  let wantsAudio = isHomePage;
+  try {
+    const savedPreference = window.localStorage.getItem(storageKey);
+    if (savedPreference !== null) wantsAudio = savedPreference === "true";
+    else if (isHomePage) window.localStorage.setItem(storageKey, "true");
+  } catch (error) {
+    // Audio still works when browser storage is unavailable.
+  }
   const setButton = (isOn) => {
     button.textContent = isOn ? "Audio: On" : "Audio: Off";
     button.setAttribute("aria-pressed", String(isOn));
   };
 
+  setButton(wantsAudio);
+
   button.addEventListener("click", () => {
     wantsAudio = !wantsAudio;
     setButton(wantsAudio);
+    try {
+      window.localStorage.setItem(storageKey, String(wantsAudio));
+    } catch (error) {
+      // Keep the current preference for this page if storage is unavailable.
+    }
     if (!player) return;
     if (wantsAudio) player.playVideo();
     else player.pauseVideo();
@@ -30,7 +46,7 @@
       height: "200",
       videoId,
       playerVars: {
-        autoplay: 1,
+        autoplay: 0,
         controls: 0,
         loop: 1,
         playlist: videoId,
@@ -40,16 +56,7 @@
         onReady: (event) => {
           button.disabled = false;
           if (wantsAudio) event.target.playVideo();
-          else event.target.playVideo();
-        },
-        onStateChange: (event) => {
-          if (event.data === YT.PlayerState.PLAYING) {
-            wantsAudio = true;
-            setButton(true);
-          } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
-            wantsAudio = false;
-            setButton(false);
-          }
+          else event.target.pauseVideo();
         },
         onError: () => {
           button.disabled = true;
