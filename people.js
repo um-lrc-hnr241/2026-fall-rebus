@@ -83,7 +83,7 @@ const hostDetails = {
   faizan: { year: "2030", role: "Team spokesperson", quote: "“Evolution forged the entirety of sentient life on this planet using only one tool, the mistake.” — Dr. Robert Ford" },
   theadora: { year: "2030", role: "Team moderator", quote: "“See, now that's why I never learned to read” — Lawrence" },
   catherine: { year: "2030", role: "Team designer", quote: "Favorite quote not provided." },
-  danielle: { year: "2030", role: "Team checker", quote: "Favorite quote not provided." },
+  danielle: { year: "2030", role: "Team checker", quote: "“Some people choose to see the ugliness in this world. The disarray. I choose to see the beauty.” — Dolores, Westworld" },
   maya: { year: "2030", role: "Team recorder", quote: "Favorite quote not provided." },
   lilly: { year: "2030", role: "Team devil’s advocate", quote: "“67”" }
 };
@@ -168,7 +168,7 @@ hosts.forEach((host, hostIndex) => {
     panel.append(panelTitle);
     if (writing.file) {
       const preview = make("iframe", "document-preview");
-      preview.src = writing.file.replace(/\/edit(?:\?.*)?$/, "/preview");
+      preview.src = writing.file.replace(/\/edit(?:\?.*)?(?:#.*)?$/, "/preview");
       preview.title = `${host.name}, ${writing.label} document preview`;
       preview.loading = "lazy";
       preview.setAttribute("referrerpolicy", "no-referrer");
